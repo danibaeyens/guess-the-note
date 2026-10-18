@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bfyu2beg0hro7"]
+
+[ext_resource type="Script" uid="uid://cvflnxl18wtc5" path="res://main.gd" id="1_g84o6"]
+[ext_resource type="Script" uid="uid://edatrmykv5yb" path="res://staff.gd" id="2_td4n3"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_8468a"]
+
+[node name="Main" type="Node2D" unique_id=77418366]
+script = ExtResource("1_g84o6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=407508090]
+stream = SubResource("AudioStreamMicrophone_8468a")
+bus = &"Mic"
+
+[node name="Label" type="Label" parent="." unique_id=1020705093]
+offset_left = 56.0
+offset_top = 440.0
+offset_right = 165.0
+offset_bottom = 473.0
+
+[node name="TargetLabel" type="Label" parent="." unique_id=1868835878]
+offset_left = 73.0
+offset_top = 103.0
+offset_right = 113.0
+offset_bottom = 126.0
+theme_override_font_sizes/font_size = 20
+
+[node name="ResultLabel" type="Label" parent="." unique_id=1289921703]
+offset_left = 100.0
+offset_top = 161.0
+offset_right = 140.0
+offset_bottom = 184.0
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1312696320]
+offset_left = 90.0
+offset_top = 310.0
+offset_right = 130.0
+offset_bottom = 333.0
+theme_override_font_sizes/font_size = 32
+
+[node name="Staff" type="Node2D" parent="." unique_id=1358749772]
+position = Vector2(650, 200)
+script = ExtResource("2_td4n3")
